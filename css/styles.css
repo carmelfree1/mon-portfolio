@@ -7,11 +7,29 @@
     --text-light: #667085;
     --bg-soft: #f3f7f6;
     --bg-white: #ffffff;
+    --header-bg: rgba(255, 255, 255, 0.94);
+    --hero-start: #f7fbfa;
     --border-color: #dde5e3;
     --border-radius: 8px;
     --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
     --shadow-lg: 0 20px 45px rgba(17, 24, 39, 0.14);
     --transition: 180ms ease;
+}
+
+[data-theme="dark"] {
+    --primary-color: #2dd4bf;
+    --primary-dark: #14b8a6;
+    --accent-color: #f59e0b;
+    --ink: #f8fafc;
+    --text-color: #d8dee8;
+    --text-light: #aab6c7;
+    --bg-soft: #111827;
+    --bg-white: #0b1220;
+    --header-bg: rgba(11, 18, 32, 0.94);
+    --hero-start: #101827;
+    --border-color: #243244;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+    --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.38);
 }
 
 * {
@@ -62,12 +80,60 @@ a {
 }
 
 header {
-    background: rgba(255, 255, 255, 0.94);
+    background: var(--header-bg);
     border-bottom: 1px solid var(--border-color);
     position: sticky;
     top: 0;
     z-index: 100;
     backdrop-filter: blur(12px);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    order: 3;
+}
+
+.theme-toggle {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    background: var(--bg-white);
+    color: var(--ink);
+    cursor: pointer;
+    transition: background var(--transition), border-color var(--transition), color var(--transition);
+}
+
+.theme-toggle:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.theme-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    transition: opacity var(--transition), transform var(--transition);
+}
+
+.theme-icon-moon {
+    opacity: 0;
+    transform: rotate(-45deg) scale(0.7);
+}
+
+[data-theme="dark"] .theme-icon-sun {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.7);
+}
+
+[data-theme="dark"] .theme-icon-moon {
+    opacity: 1;
+    transform: rotate(0) scale(1);
 }
 
 .header-inner {
@@ -130,7 +196,7 @@ nav a:hover {
     background:
         radial-gradient(circle at top right, rgba(217, 119, 6, 0.14), transparent 34%),
         linear-gradient(90deg, rgba(15, 118, 110, 0.10) 0 1px, transparent 1px 100%),
-        linear-gradient(180deg, #f7fbfa 0%, #ffffff 100%);
+        linear-gradient(180deg, var(--hero-start) 0%, var(--bg-white) 100%);
     background-size: 44px 44px, auto;
 }
 

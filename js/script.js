@@ -47,6 +47,7 @@ const contactForm = document.getElementById('contactForm');
 const formStatus = document.getElementById('formStatus');
 const nav = document.querySelector('nav');
 const menuBtn = document.querySelector('.mobile-menu-btn');
+const themeToggle = document.querySelector('.theme-toggle');
 const modal = document.getElementById('projectModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalType = document.getElementById('modalType');
@@ -55,6 +56,32 @@ const modalGoal = document.getElementById('modalGoal');
 const modalFeatures = document.getElementById('modalFeatures');
 const modalTech = document.getElementById('modalTech');
 const modalCode = document.getElementById('modalCode');
+
+const savedTheme = localStorage.getItem('portfolio-theme');
+const initialTheme = savedTheme || 'dark';
+
+function applyTheme(theme) {
+    document.documentElement.dataset.theme = theme;
+
+    if (!themeToggle) {
+        return;
+    }
+
+    const isDark = theme === 'dark';
+    themeToggle.setAttribute('aria-pressed', String(isDark));
+    themeToggle.setAttribute('aria-label', isDark ? 'Activer le thème clair' : 'Activer le thème sombre');
+}
+
+applyTheme(initialTheme);
+
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        const currentTheme = document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+        const nextTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('portfolio-theme', nextTheme);
+        applyTheme(nextTheme);
+    });
+}
 
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
