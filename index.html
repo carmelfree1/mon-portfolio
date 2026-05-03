@@ -3,119 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Gnadou Léazike Bienvenu Carmel | Développeur Fullstack</title>
-    <meta name="description" content="Portfolio de Gnadou Léazike Bienvenu Carmel, Développeur Fullstack spécialisé en PHP, React Native, HTML/CSS et JavaScript">
+    <title>Gnadou Léazike Bienvenu Carmel | Étudiant & Développeur Fullstack</title>
+    <meta name="description" content="Portfolio de Gnadou Léazike Bienvenu Carmel, étudiant en informatique et développeur fullstack spécialisé en applications web, mobile, PHP, JavaScript, React, Flutter et Node.js.">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <svg class="svg-sprite" aria-hidden="true">
+        <symbol id="icon-cart" viewBox="0 0 24 24">
+            <path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 8H6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="10" cy="20" r="1.4" fill="currentColor"/>
+            <circle cx="17" cy="20" r="1.4" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-qr" viewBox="0 0 24 24">
+            <path d="M4 4h6v6H4V4Zm10 0h6v6h-6V4ZM4 14h6v6H4v-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M14 14h2v2h-2v-2Zm4 0h2v6h-6v-2h4v-4Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-road" viewBox="0 0 24 24">
+            <path d="M8 21 11 3h2l3 18M12 7v2m0 4v3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5 21h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-code" viewBox="0 0 24 24">
+            <path d="m8 8-4 4 4 4m8-8 4 4-4 4m-2-11-4 14" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-server" viewBox="0 0 24 24">
+            <rect x="4" y="4" width="16" height="6" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <rect x="4" y="14" width="16" height="6" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M8 7h.01M8 17h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-database" viewBox="0 0 24 24">
+            <ellipse cx="12" cy="6" rx="7" ry="3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        </symbol>
+        <symbol id="icon-file" viewBox="0 0 24 24">
+            <path d="M7 3h7l4 4v14H7V3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M14 3v5h5M9 13h6M9 17h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-home" viewBox="0 0 24 24">
+            <path d="M4 11.5 12 5l8 6.5V20h-5v-5H9v5H4v-8.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-user" viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M4.5 20a7.5 7.5 0 0 1 15 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-briefcase" viewBox="0 0 24 24">
+            <path d="M9 7V5h6v2m-10 4h14M5 7h14v12H5V7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-chat" viewBox="0 0 24 24">
+            <path d="M5 18.5 6.1 15A7.8 7.8 0 1 1 9 17.3l-4 1.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 10h.01M12 10h.01M15 10h.01" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+        </symbol>
+        <symbol id="icon-phone" viewBox="0 0 24 24">
+            <path d="M7 4h3l1.3 4-2 1.2a12 12 0 0 0 5.5 5.5l1.2-2 4 1.3v3a3 3 0 0 1-3.4 3A15.5 15.5 0 0 1 4 7.4 3 3 0 0 1 7 4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-music" viewBox="0 0 24 24">
+            <path d="M15 4v11.2a3.8 3.8 0 1 1-2-3.3V7h6V4h-4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-mail" viewBox="0 0 24 24">
+            <path d="M4 6h16v12H4V6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="m4 7 8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-location" viewBox="0 0 24 24">
+            <path d="M12 21s7-5.3 7-11a7 7 0 0 0-14 0c0 5.7 7 11 7 11Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        </symbol>
+        <symbol id="icon-github" viewBox="0 0 24 24">
+            <path d="M12 3a9 9 0 0 0-3 17c.5.1.7-.2.7-.5v-1.6c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 0 1.6 1.1 1.6 1.1.9 1.6 2.4 1.1 3 .9.1-.7.4-1.1.7-1.4-2.2-.3-4.5-1.1-4.5-4.9 0-1.1.4-2 1-2.7-.1-.3-.4-1.3.1-2.7 0 0 .9-.3 2.8 1a9.8 9.8 0 0 1 5 0c1.9-1.3 2.8-1 2.8-1 .5 1.4.2 2.4.1 2.7.6.7 1 1.6 1 2.7 0 3.8-2.3 4.6-4.5 4.9.4.3.8 1 .8 2v3c0 .3.2.6.8.5A9 9 0 0 0 12 3Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+            <path d="M5 19.2 6.1 16A8 8 0 1 1 9 18l-4 1.2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M9.4 8.4c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.7c.1.3.1.5-.1.7l-.4.5c.7 1.2 1.6 2.1 2.8 2.7l.5-.6c.2-.2.4-.2.7-.1l1.6.8c.3.1.4.3.4.6v.5c0 .4-.2.7-.5.8-.6.3-1.7.3-3.2-.4-2.1-1-3.8-2.7-4.8-4.8-.7-1.5-.7-2.6-.4-3.2Z" fill="currentColor"/>
+        </symbol>
+        <symbol id="icon-tiktok" viewBox="0 0 24 24">
+            <path d="M15 4c.4 2.6 1.9 4.1 4.5 4.4v3a7 7 0 0 1-4.5-1.5v5.4a5.2 5.2 0 1 1-5.2-5.2c.4 0 .8 0 1.2.1v3.2a2.1 2.1 0 1 0 1.4 2V4h2.6Z" fill="currentColor"/>
+        </symbol>
+    </svg>
     <header>
         <div class="container header-inner">
-            <h1 class="logo">Portfolio GC</h1>
+            <a class="logo" href="#accueil" aria-label="Retour à l'accueil">Carmel.dev</a>
+            <button class="mobile-menu-btn" type="button" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
             <nav aria-label="Navigation principale">
                 <ul>
-                    <li><a href="#accueil">Accueil</a></li>
-                    <li><a href="#apropos">À propos</a></li>
-                    <li><a href="#projets">Projets</a></li>
-                    <li><a href="#competences">Compétences</a></li>
-                    <li><a href="#formation">Formation</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#accueil"><svg><use href="#icon-home"></use></svg>Accueil</a></li>
+                    <li><a href="#apropos"><svg><use href="#icon-user"></use></svg>Profil</a></li>
+                    <li><a href="#projets"><svg><use href="#icon-briefcase"></use></svg>Réalisations</a></li>
+                    <li><a href="#competences"><svg><use href="#icon-code"></use></svg>Expertise</a></li>
+                    <li><a href="#cv"><svg><use href="#icon-file"></use></svg>CV</a></li>
+                    <li><a href="#contact"><svg><use href="#icon-mail"></use></svg>Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main>
-        <!-- Hero -->
         <section id="accueil" class="hero">
-            <div class="container">
+            <div class="container hero-inner">
                 <div class="hero-content">
-                    <h2>Bonjour, je suis Gnadou Léazike Bienvenu Carmel</h2>
-                    <p class="lead">Développeur Fullstack — Je crée des applications web et mobiles modernes avec PHP, React Native, HTML/CSS et JavaScript.</p>
+                    <p class="eyebrow">Étudiant en informatique & développeur fullstack</p>
+                    <h1>Je conçois des applications web et mobiles claires, rapides et utiles.</h1>
+                    <p class="lead">Je crée des solutions simples pour vendre, gérer, signaler et automatiser des tâches du quotidien.</p>
                     <div class="hero-btns">
-                        <a class="btn primary" href="#projets">Voir mes projets</a>
-                        <a class="btn ghost" href="#contact">Me contacter</a>
+                        <a class="btn primary" href="#projets">Voir mes réalisations</a>
+                        <a class="btn ghost" href="#contact">Discuter d'un projet</a>
+                    </div>
+                    <div class="hero-art" aria-hidden="true">
+                        <svg viewBox="0 0 760 210" role="img">
+                            <path d="M58 42h644a28 28 0 0 1 28 28v78a28 28 0 0 1-28 28H58a28 28 0 0 1-28-28V70a28 28 0 0 1 28-28Z" fill="currentColor" opacity=".08"/>
+                            <path d="M90 82h190M90 112h120M350 82h90M350 112h170M580 82h72M580 112h96" stroke="currentColor" stroke-width="14" stroke-linecap="round" opacity=".28"/>
+                            <path d="M305 68v82M545 68v82" stroke="currentColor" stroke-width="2" opacity=".18"/>
+                            <circle cx="105" cy="151" r="10" fill="currentColor" opacity=".35"/>
+                            <circle cx="380" cy="151" r="10" fill="currentColor" opacity=".35"/>
+                            <circle cx="610" cy="151" r="10" fill="currentColor" opacity=".35"/>
+                        </svg>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- À propos -->
         <section id="apropos" class="about">
-            <div class="container">
-                <h2>À propos</h2>
+            <div class="container split-section">
+                <div>
+                    <p class="eyebrow">Profil</p>
+                    <h2>Un étudiant développeur orienté solutions concrètes.</h2>
+                </div>
                 <div class="about-content">
                     <p class="about-text">
-                        Passionné par le développement web et logiciel, je crée des applications modernes en front-end et back-end. 
-                        Étudiant en Licence 3 Informatique à l'ESETEC, j'utilise PHP pour le back-end et React Native (Expo) pour le mobile. 
-                        Autonome et rigoureux, je cherche un stage pour appliquer mes compétences, apprendre en entreprise et valider ma licence.
+                        Je suis étudiant en informatique et développeur fullstack. Je crée des applications web et mobiles simples, utiles et adaptées aux besoins des utilisateurs.
                     </p>
                     <div class="about-grid">
                         <div class="about-card">
-                            <h3>Expérience</h3>
-                            <p>Stages et projets réalisés en autonomie ou en équipe. Création de sites web et d'applications de gestion.</p>
+                            <h3>Conception</h3>
+                            <p>Structurer les écrans, les parcours utilisateurs et les fonctionnalités avant de coder.</p>
                         </div>
                         <div class="about-card">
-                            <h3>Méthode</h3>
-                            <p>Approche centrée sur l'utilisateur, développement responsive, tests et optimisation des performances.</p>
+                            <h3>Développement</h3>
+                            <p>Construire des interfaces responsives et des fonctionnalités côté serveur fiables.</p>
                         </div>
                         <div class="about-card">
-                            <h3>Objectifs</h3>
-                            <p>Recherche d'un stage en développement pour valider ma licence et acquérir de l'expérience professionnelle.</p>
+                            <h3>Amélioration</h3>
+                            <p>Tester, corriger, documenter et rendre chaque projet plus simple à utiliser.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projets -->
         <section id="projets" class="projets">
             <div class="container">
-                <h2>Projets</h2>
+                <div class="section-heading">
+                    <p class="eyebrow">Réalisations</p>
+                    <h2>Projets sélectionnés</h2>
+                    <p>Chaque projet montre une capacité différente: vente en ligne, contrôle d'accès et service public numérique.</p>
+                </div>
                 <div class="grid">
-                    <article class="projet-card">
-                        <div class="projet-img">Site Festival</div>
+                    <article class="projet-card" data-project="parfums">
+                        <div class="project-visual parfums">
+                            <svg class="project-icon"><use href="#icon-cart"></use></svg>
+                            <span>Parfums</span>
+                        </div>
                         <div class="content">
-                            <h3>Site pour la promotion d'un festival</h3>
-                            <p>Site ayant pour objectif de faire la publicité d'un événement afin de toucher un maximum de personnes.</p>
+                            <p class="project-type">E-commerce</p>
+                            <h3>Boutique de vente de parfums</h3>
+                            <p>Plateforme e-commerce pour présenter des parfums, organiser un catalogue et faciliter le parcours d'achat.</p>
                             <div class="tech-tags">
-                                <span class="tech-tag">HTML/CSS</span>
-                                <span class="tech-tag">JavaScript</span>
                                 <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">MySQL</span>
                             </div>
                             <div class="actions">
-                                <a class="btn ghost" href="https://github.com/carmelfree1/Site-evenementiel.git" target="_blank"Voir le code du projet festival">Voir le code</a>
+                                <button class="btn primary project-preview" type="button" data-project="parfums">Voir le projet</button>
+                                <a class="btn ghost" href="https://github.com/carmelfree1" target="_blank" rel="noopener noreferrer">Voir GitHub</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="projet-card">
-                        <div class="projet-img">Gestion Etudiant</div>
+                    <article class="projet-card" data-project="qraccess">
+                        <div class="project-visual qraccess">
+                            <svg class="project-icon"><use href="#icon-qr"></use></svg>
+                            <span>QR Access</span>
+                        </div>
                         <div class="content">
-                            <h3>Application de gestion d'un campus universitaire</h3>
-                            <p>Application de gestion : gestion des données (ajout, modification, suppression), interfaces simples, contrôle des saisies, tests et optimisation.</p>
+                            <p class="project-type">Application de gestion</p>
+                            <h3>Gestion des entrées et sorties</h3>
+                            <p>Solution de suivi des mouvements du personnel et des visiteurs avec scan de QR code.</p>
                             <div class="tech-tags">
-                                <span class="tech-tag">HTML/CSS</span>
                                 <span class="tech-tag">PHP</span>
-                                <span class="tech-tag">Base de données</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">QR Code</span>
                             </div>
                             <div class="actions">
-                                <a class="btn ghost" href="https://github.com/carmelfree1/gestion-edt.git" target="_blank">Voir le code</a>
+                                <button class="btn primary project-preview" type="button" data-project="qraccess">Voir le projet</button>
+                                <a class="btn ghost" href="https://github.com/carmelfree1" target="_blank" rel="noopener noreferrer">Voir GitHub</a>
                             </div>
                         </div>
                     </article>
 
-                    <article class="projet-card">
-                        <div class="projet-img">Perte de poids</div>
+                    <article class="projet-card" data-project="routes">
+                        <div class="project-visual routes">
+                            <svg class="project-icon"><use href="#icon-road"></use></svg>
+                            <span>Routes</span>
+                        </div>
                         <div class="content">
-                            <h3>Application mobile avec React Native</h3>
-                            <p>Développement d'applications mobiles multiplateformes avec React Native et Expo.</p>
+                            <p class="project-type">Plateforme de signalement</p>
+                            <h3>Signalement d'incidents routiers</h3>
+                            <p>Application permettant de signaler les incidents et dégradations des infrastructures routières.</p>
                             <div class="tech-tags">
-                                <span class="tech-tag">React Native</span>
-                                <span class="tech-tag">Expo</span>
-                                <span class="tech-tag">JavaScript</span>
+                                <span class="tech-tag">React Vite</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">MySQL</span>
                             </div>
                             <div class="actions">
-                                <a class="btn ghost" href="https://github.com/carmelfree1/perte-poids.git" target="_blank">Voir le code</a>
+                                <button class="btn primary project-preview" type="button" data-project="routes">Voir le projet</button>
+                                <a class="btn ghost" href="https://github.com/carmelfree1" target="_blank" rel="noopener noreferrer">Voir GitHub</a>
                             </div>
                         </div>
                     </article>
@@ -123,158 +220,146 @@
             </div>
         </section>
 
-        <!-- Compétences -->
         <section id="competences" class="skills">
             <div class="container">
-                <h2>Compétences</h2>
+                <div class="section-heading">
+                    <p class="eyebrow">Expertise</p>
+                    <h2>Compétences techniques</h2>
+                </div>
                 <div class="skills-grid">
                     <div class="skill-category">
-                        <h3>Front-end</h3>
+                        <h3><svg class="section-icon"><use href="#icon-code"></use></svg>FRONTEND</h3>
                         <div class="skill">
-                            <div class="skill-header">
-                                <h4>HTML & CSS</h4>
-                                <span>90%</span>
-                            </div>
-                            <div class="meter"><span style="width:90%"></span></div>
+                            <div class="skill-header"><h4>HTML & CSS</h4><span>90%</span></div>
+                            <div class="meter"><span data-level="90"></span></div>
                         </div>
                         <div class="skill">
-                            <div class="skill-header">
-                                <h4>JavaScript</h4>
-                                <span>80%</span>
-                            </div>
-                            <div class="meter"><span style="width:80%"></span></div>
+                            <div class="skill-header"><h4>JavaScript</h4><span>80%</span></div>
+                            <div class="meter"><span data-level="80"></span></div>
                         </div>
                         <div class="skill">
-                            <div class="skill-header">
-                                <h4>React Native</h4>
-                                <span>75%</span>
-                            </div>
-                            <div class="meter"><span style="width:75%"></span></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill-category">
-                        <h3>Back-end</h3>
-                        <div class="skill">
-                            <div class="skill-header">
-                                <h4>PHP</h4>
-                                <span>85%</span>
-                            </div>
-                            <div class="meter"><span style="width:85%"></span></div>
+                            <div class="skill-header"><h4>React Native</h4><span>75%</span></div>
+                            <div class="meter"><span data-level="75"></span></div>
                         </div>
                         <div class="skill">
-                            <div class="skill-header">
-                                <h4>Python</h4>
-                                <span>70%</span>
-                            </div>
-                            <div class="meter"><span style="width:70%"></span></div>
+                            <div class="skill-header"><h4>React</h4><span>75%</span></div>
+                            <div class="meter"><span data-level="75"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header"><h4>Flutter</h4><span>70%</span></div>
+                            <div class="meter"><span data-level="70"></span></div>
                         </div>
                     </div>
-                    
+
                     <div class="skill-category">
-                        <h3>Bases de données & Outils</h3>
+                        <h3><svg class="section-icon"><use href="#icon-server"></use></svg>BACKEND</h3>
                         <div class="skill">
-                            <div class="skill-header">
-                                <h4>SQL / Oracle</h4>
-                                <span>80%</span>
-                            </div>
-                            <div class="meter"><span style="width:80%"></span></div>
+                            <div class="skill-header"><h4>PHP</h4><span>85%</span></div>
+                            <div class="meter"><span data-level="85"></span></div>
                         </div>
                         <div class="skill">
-                            <div class="skill-header">
-                                <h4>MongoDB</h4>
-                                <span>65%</span>
-                            </div>
-                            <div class="meter"><span style="width:65%"></span></div>
+                            <div class="skill-header"><h4>Node.js</h4><span>75%</span></div>
+                            <div class="meter"><span data-level="75"></span></div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <h3><svg class="section-icon"><use href="#icon-database"></use></svg>DATABASE</h3>
+                        <div class="skill">
+                            <div class="skill-header"><h4>MySQL</h4><span>80%</span></div>
+                            <div class="meter"><span data-level="80"></span></div>
                         </div>
                         <div class="skill">
-                            <div class="skill-header">
-                                <h4>Windev 2025</h4>
-                                <span>75%</span>
-                            </div>
-                            <div class="meter"><span style="width:75%"></span></div>
+                            <div class="skill-header"><h4>PostgreSQL</h4><span>75%</span></div>
+                            <div class="meter"><span data-level="75"></span></div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-header"><h4>MongoDB</h4><span>65%</span></div>
+                            <div class="meter"><span data-level="65"></span></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Formation -->
-        <section id="formation" class="formation">
+        <section id="cv" class="cv-section">
             <div class="container">
-                <h2>Formation & Certifications</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-date">2022 - Maintenant</div>
-                        <div class="timeline-content">
-                            <h3>Licence Informatique Génie Logiciel</h3>
-                            <p>École Supérieure de l'Enseignement Technique et Commercial (ESETEC), Yamoussoukro</p>
-                        </div>
+                <div class="cv-card">
+                    <svg class="cv-icon" aria-hidden="true"><use href="#icon-file"></use></svg>
+                    <div>
+                        <p class="eyebrow">Curriculum vitae</p>
+                        <h2>Télécharger mon CV</h2>
+                        <p>Retrouvez mes compétences techniques, mes projets et mes informations de contact dans un document prêt à partager.</p>
                     </div>
-                    <div class="timeline-item">
-                        <div class="timeline-date">2021 - 2022</div>
-                        <div class="timeline-content">
-                            <h3>BAC Général</h3>
-                            <p>Institut Scolaire La Couronne, Abengourou</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-content">
-                            <h3>Certifications</h3>
-                            <ul>
-                                <li>Certificat en développement web - W3Schools</li>
-                                <li>Certificat en développement mobile - Udemy</li>
-                            </ul>
-                        </div>
+                    <div class="cv-actions">
+                        <a class="btn primary" href="assets/cv-gnadou-carmel.pdf" download>Télécharger le CV</a>
+                        <a class="btn ghost" href="assets/cv-gnadou-carmel.pdf" target="_blank" rel="noopener noreferrer">Ouvrir le CV</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact -->
         <section id="contact" class="contact">
             <div class="container">
-                <h2>Contact</h2>
+                <div class="section-heading">
+                    <p class="eyebrow">Contact</p>
+                    <h2>Parlons de votre projet</h2>
+                    <p>Je suis disponible pour échanger sur une application web, une application mobile ou un outil de gestion.</p>
+                </div>
                 <div class="contact-container">
                     <div class="contact-info">
                         <div class="contact-item">
-                            <div class="contact-icon">📞</div>
+                            <div class="contact-icon"><svg><use href="#icon-phone"></use></svg></div>
                             <div>
                                 <h4>Téléphone</h4>
-                                <p>0748207370 / 0544874948</p>
+                                <p><a href="tel:+2250748207370">0748207370</a> / <a href="tel:+2250544874948">0544874948</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">✉️</div>
+                            <div class="contact-icon"><svg><use href="#icon-chat"></use></svg></div>
+                            <div>
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/2250748207370" target="_blank" rel="noopener noreferrer">Écrire sur WhatsApp</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg><use href="#icon-mail"></use></svg></div>
                             <div>
                                 <h4>Email</h4>
-                                <p>jcartergnadou@gmail.com</p>
+                                <p><a href="mailto:jcartergnadou@gmail.com">jcartergnadou@gmail.com</a></p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">📍</div>
+                            <div class="contact-icon"><svg><use href="#icon-location"></use></svg></div>
                             <div>
                                 <h4>Localisation</h4>
                                 <p>Bouaflé, Côte d'Ivoire</p>
                             </div>
                         </div>
                         <div class="contact-item">
-                            <div class="contact-icon">👤</div>
+                            <div class="contact-icon"><svg><use href="#icon-github"></use></svg></div>
                             <div>
-                                <h4>Réseaux sociaux</h4>
-                                <p>carmelgnadou</p>
+                                <h4>GitHub</h4>
+                                <p><a href="https://github.com/carmelfree1" target="_blank" rel="noopener noreferrer">github.com/carmelfree1</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><svg><use href="#icon-music"></use></svg></div>
+                            <div>
+                                <h4>TikTok</h4>
+                                <p><a href="https://www.tiktok.com/@carmelgnadou" target="_blank" rel="noopener noreferrer">@carmelgnadou</a></p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <form id="contactForm" novalidate>
                         <div class="form-row">
                             <label for="name">Nom</label>
-                            <input id="name" name="name" type="text" required>
+                            <input id="name" name="name" type="text" autocomplete="name" required>
                         </div>
                         <div class="form-row">
-                            <label for="email">E‑mail</label>
-                            <input id="email" name="email" type="email" required>
+                            <label for="email">E-mail</label>
+                            <input id="email" name="email" type="email" autocomplete="email" required>
                         </div>
                         <div class="form-row">
                             <label for="subject">Sujet</label>
@@ -285,7 +370,7 @@
                             <textarea id="message" name="message" rows="6" required></textarea>
                         </div>
                         <div class="form-btns">
-                            <button class="btn primary" type="submit">Envoyer</button>
+                            <button class="btn primary" type="submit">Envoyer par e-mail</button>
                             <button class="btn ghost" type="reset">Réinitialiser</button>
                         </div>
                         <p id="formStatus" aria-live="polite"></p>
@@ -295,21 +380,46 @@
         </section>
     </main>
 
+    <div class="project-modal" id="projectModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close-modal></div>
+        <section class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" type="button" aria-label="Fermer l'aperçu" data-close-modal>×</button>
+            <p class="eyebrow" id="modalType"></p>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+            <div class="modal-details">
+                <div>
+                    <h3>Objectif</h3>
+                    <p id="modalGoal"></p>
+                </div>
+                <div>
+                    <h3>Fonctionnalités</h3>
+                    <ul id="modalFeatures"></ul>
+                </div>
+            </div>
+            <div class="tech-tags" id="modalTech"></div>
+            <div class="actions">
+                <a class="btn primary" id="modalCode" href="#" target="_blank" rel="noopener noreferrer">Voir le code</a>
+            </div>
+        </section>
+    </div>
+
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div>
                     <h3>Gnadou Léazike Bienvenu Carmel</h3>
-                    <p>Développeur Fullstack</p>
+                    <p>Étudiant en informatique & développeur fullstack</p>
                 </div>
                 <div class="social-links">
-                    <a href="#" class="social-link" aria-label="LinkedIn">in</a>
-                    <a href="#" class="social-link" aria-label="GitHub">gh</a>
-                    <a href="#" class="social-link" aria-label="Twitter">tw</a>
+                    <a href="https://wa.me/2250748207370" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><svg><use href="#icon-whatsapp"></use></svg></a>
+                    <a href="https://www.tiktok.com/@carmelgnadou" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><svg><use href="#icon-tiktok"></use></svg></a>
+                    <a href="https://github.com/carmelfree1" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><svg><use href="#icon-github"></use></svg></a>
+                    <a href="mailto:jcartergnadou@gmail.com" class="social-link" aria-label="Email"><svg><use href="#icon-mail"></use></svg></a>
                 </div>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 — Gnadou Léazike Bienvenu Carmel — <a href="#" style="color:inherit;text-decoration:underline">Mentions légales</a></p>
+                <p>&copy; 2026 - Gnadou Léazike Bienvenu Carmel</p>
             </div>
         </div>
     </footer>
