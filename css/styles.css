@@ -1,14 +1,20 @@
 :root {
     --primary-color: #0f766e;
     --primary-dark: #115e59;
+    --primary-contrast: #ffffff;
     --accent-color: #d97706;
     --ink: #111827;
     --text-color: #243041;
     --text-light: #667085;
     --bg-soft: #f3f7f6;
     --bg-white: #ffffff;
+    --surface: #ffffff;
+    --surface-raised: #ffffff;
     --header-bg: rgba(255, 255, 255, 0.94);
     --hero-start: #f7fbfa;
+    --footer-bg: #111827;
+    --input-bg: #ffffff;
+    --meter-bg: #dce7e4;
     --border-color: #dde5e3;
     --border-radius: 8px;
     --shadow: 0 10px 30px rgba(17, 24, 39, 0.08);
@@ -19,15 +25,21 @@
 [data-theme="dark"] {
     --primary-color: #2dd4bf;
     --primary-dark: #14b8a6;
+    --primary-contrast: #06201d;
     --accent-color: #f59e0b;
     --ink: #f8fafc;
     --text-color: #d8dee8;
-    --text-light: #aab6c7;
-    --bg-soft: #111827;
-    --bg-white: #0b1220;
-    --header-bg: rgba(11, 18, 32, 0.94);
-    --hero-start: #101827;
-    --border-color: #243244;
+    --text-light: #b7c3d7;
+    --bg-soft: #0f172a;
+    --bg-white: #080d18;
+    --surface: #101827;
+    --surface-raised: #141f31;
+    --header-bg: rgba(8, 13, 24, 0.94);
+    --hero-start: #0f172a;
+    --footer-bg: #050814;
+    --input-bg: #0f172a;
+    --meter-bg: #26364b;
+    --border-color: #334155;
     --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
     --shadow-lg: 0 20px 45px rgba(0, 0, 0, 0.38);
 }
@@ -103,7 +115,7 @@ header {
     height: 44px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: var(--bg-white);
+    background: var(--surface);
     color: var(--ink);
     cursor: pointer;
     transition: background var(--transition), border-color var(--transition), color var(--transition);
@@ -183,7 +195,7 @@ nav a:hover {
     height: 44px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: var(--bg-white);
+    background: var(--surface);
     color: var(--ink);
     cursor: pointer;
     font-size: 1.35rem;
@@ -259,7 +271,7 @@ nav a:hover {
 
 .btn.primary {
     background: var(--primary-color);
-    color: white;
+    color: var(--primary-contrast);
 }
 
 .btn.primary:hover {
@@ -267,7 +279,7 @@ nav a:hover {
 }
 
 .btn.ghost {
-    background: var(--bg-white);
+    background: var(--surface);
     border-color: var(--border-color);
     color: var(--ink);
 }
@@ -278,7 +290,7 @@ nav a:hover {
 }
 
 .hero .btn.ghost {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .hero-art {
@@ -344,7 +356,7 @@ section:nth-of-type(even) {
 form {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: var(--bg-white);
+    background: var(--surface);
     box-shadow: var(--shadow);
 }
 
@@ -481,8 +493,8 @@ form {
     padding: 0.18rem 0.65rem;
     border: 1px solid var(--border-color);
     border-radius: 999px;
-    background: var(--bg-soft);
-    color: var(--text-light);
+    background: var(--surface-raised);
+    color: var(--text-color);
     font-size: 0.84rem;
     font-weight: 700;
 }
@@ -508,7 +520,7 @@ form {
     height: 38px;
     padding: 0.55rem;
     border-radius: 12px;
-    background: rgba(15, 118, 110, 0.1);
+    background: rgba(45, 212, 191, 0.12);
     color: var(--primary-color);
 }
 
@@ -536,7 +548,7 @@ form {
 .meter {
     height: 8px;
     border-radius: 999px;
-    background: #dce7e4;
+    background: var(--meter-bg);
     overflow: hidden;
 }
 
@@ -561,8 +573,8 @@ form {
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
     background:
-        linear-gradient(135deg, rgba(15, 118, 110, 0.08), rgba(217, 119, 6, 0.08)),
-        var(--bg-white);
+        linear-gradient(135deg, rgba(45, 212, 191, 0.10), rgba(245, 158, 11, 0.10)),
+        var(--surface);
     box-shadow: var(--shadow);
 }
 
@@ -572,7 +584,7 @@ form {
     padding: 1rem;
     border-radius: 18px;
     background: var(--primary-color);
-    color: white;
+    color: var(--primary-contrast);
     box-shadow: var(--shadow);
 }
 
@@ -616,7 +628,7 @@ form {
     padding: 1rem;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: var(--bg-white);
+    background: var(--surface);
 }
 
 .contact-icon {
@@ -627,7 +639,7 @@ form {
     height: 46px;
     border-radius: 50%;
     background: var(--primary-color);
-    color: white;
+    color: var(--primary-contrast);
     font-size: 0.95rem;
     font-weight: 850;
 }
@@ -671,8 +683,9 @@ input,
 textarea {
     width: 100%;
     padding: 0.78rem;
-    border: 1px solid #cfd8d6;
+    border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
+    background: var(--input-bg);
     color: var(--ink);
     font: inherit;
     transition: border-color var(--transition), box-shadow var(--transition);
@@ -734,7 +747,7 @@ textarea:focus {
     overflow: auto;
     padding: 1.6rem;
     border-radius: var(--border-radius);
-    background: var(--bg-white);
+    background: var(--surface);
     box-shadow: var(--shadow-lg);
 }
 
@@ -757,7 +770,7 @@ textarea:focus {
     height: 40px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: var(--bg-white);
+    background: var(--surface-raised);
     color: var(--ink);
     cursor: pointer;
     font-size: 1.6rem;
@@ -775,7 +788,7 @@ textarea:focus {
     padding: 1rem;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
-    background: var(--bg-soft);
+    background: var(--surface-raised);
 }
 
 .modal-details ul {
@@ -784,7 +797,7 @@ textarea:focus {
 }
 
 footer {
-    background: var(--ink);
+    background: var(--footer-bg);
     color: white;
     padding: 2.5rem 0 1.2rem;
 }
@@ -880,7 +893,7 @@ footer {
         right: 0;
         display: none;
         border-bottom: 1px solid var(--border-color);
-        background: var(--bg-white);
+        background: var(--surface);
         box-shadow: var(--shadow);
     }
 
