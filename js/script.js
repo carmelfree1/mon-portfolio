@@ -134,7 +134,7 @@ if (contactForm) {
 
         formStatus.textContent = 'Ouverture de votre application e-mail...';
         formStatus.className = 'success';
-        window.location.href = `mailto:jcartergnadou@gmail.com?subject=${subject}&body=${body}`;
+        window.location.href = `mailto:gnadoucarmel@gmail.com?subject=${subject}&body=${body}`;
     });
 }
 
