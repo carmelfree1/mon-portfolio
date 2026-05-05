@@ -21,6 +21,8 @@ Portfolio personnel d'étudiant en informatique et développeur fullstack web et
 - Boutique e-commerce de vente de parfums
 - Application de gestion des entrées et sorties avec scan QR code
 - Plateforme de signalement d'incidents et de dégradations routières
+- Portfolio développeur
+- Site vitrine Yakro Tourisme
 
 ## CV
 

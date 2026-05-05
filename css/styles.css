@@ -289,6 +289,15 @@ nav a:hover {
     color: var(--primary-color);
 }
 
+.disabled-link,
+.disabled-link:hover {
+    opacity: 0.72;
+    cursor: not-allowed;
+    transform: none;
+    border-color: var(--border-color);
+    color: var(--text-light);
+}
+
 .hero .btn.ghost {
     background: rgba(255, 255, 255, 0.02);
 }
@@ -373,6 +382,27 @@ form {
     margin-bottom: 0.45rem;
 }
 
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    min-height: 24px;
+    margin-left: 0.35rem;
+    padding: 0.12rem 0.55rem;
+    border: 1px solid rgba(245, 158, 11, 0.38);
+    border-radius: 999px;
+    background: rgba(245, 158, 11, 0.12);
+    color: var(--accent-color);
+    font-size: 0.72rem;
+    font-weight: 850;
+    vertical-align: middle;
+}
+
+.status-badge.done {
+    border-color: rgba(45, 212, 191, 0.38);
+    background: rgba(45, 212, 191, 0.12);
+    color: var(--primary-color);
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -434,6 +464,14 @@ form {
 
 .project-visual.routes {
     background: linear-gradient(135deg, #111827, #2563eb);
+}
+
+.project-visual.portfolio {
+    background: linear-gradient(135deg, #0f172a, #2dd4bf);
+}
+
+.project-visual.yakro {
+    background: linear-gradient(135deg, #14532d, #f59e0b);
 }
 
 .project-visual span {

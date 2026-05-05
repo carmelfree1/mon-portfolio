@@ -11,11 +11,12 @@ const projects = {
             "Interface responsive adaptée aux mobiles"
         ],
         tech: ['PHP', 'MySQL'],
-        code: 'https://github.com/carmelfree1'
+        code: 'https://github.com/carmelfree1/e-commerce'
     },
     qraccess: {
         type: 'Application de gestion',
         title: "Gestion des entrées et sorties d'une entreprise",
+        status: 'En cours',
         description: "Une solution de contrôle et de suivi des mouvements dans une entreprise, avec identification par QR code.",
         goal: "Sécuriser et automatiser l'enregistrement des entrées et sorties du personnel, des visiteurs ou des prestataires.",
         features: [
@@ -25,11 +26,12 @@ const projects = {
             "Tableau de suivi pour l'administration"
         ],
         tech: ['PHP', 'MySQL', 'QR Code'],
-        code: 'https://github.com/carmelfree1'
+        code: 'https://github.com/carmelfree1/qr_access'
     },
     routes: {
         type: 'Plateforme de signalement',
         title: "Signalement d'incidents routiers",
+        status: 'En cours',
         description: "Une application permettant aux utilisateurs de déclarer les incidents et dégradations observés sur les infrastructures routières.",
         goal: "Faciliter la remontée d'informations terrain pour aider au suivi, à la priorisation et au traitement des problèmes routiers.",
         features: [
@@ -39,7 +41,37 @@ const projects = {
             "Base de données exploitable par les services concernés"
         ],
         tech: ['React Vite', 'Node.js', 'MySQL'],
-        code: 'https://github.com/carmelfree1'
+        code: ''
+    },
+    portfolio: {
+        type: 'Site personnel',
+        title: 'Portfolio développeur',
+        description: "Un portfolio moderne pour présenter mon profil d'étudiant développeur fullstack, mes compétences, mes projets et mes contacts.",
+        goal: "Centraliser mes informations professionnelles dans une interface claire, responsive et facile à partager.",
+        features: [
+            "Présentation du profil et des compétences",
+            "Cartes projets avec fiches détaillées",
+            "Section CV avec téléchargement",
+            "Thème sombre par défaut avec changement de thème"
+        ],
+        tech: ['HTML', 'CSS', 'JavaScript'],
+        demo: 'https://mon-portfolio-fin.vercel.app/',
+        code: 'https://github.com/carmelfree1/mon-portfolio'
+    },
+    yakro: {
+        type: 'Site vitrine touristique',
+        title: 'Yakro Tourisme',
+        description: "Un site vitrine dédié à la présentation de Yamoussoukro et des lieux à découvrir dans la capitale politique ivoirienne.",
+        goal: "Mettre en valeur les endroits à visiter à Yamoussoukro avec une présentation simple, attractive et accessible.",
+        features: [
+            "Présentation de la ville de Yamoussoukro",
+            "Mise en avant des lieux touristiques",
+            "Pages ou sections de description des endroits à visiter",
+            "Interface pensée pour informer rapidement les visiteurs"
+        ],
+        tech: ['HTML/CSS', 'JavaScript', 'Site vitrine'],
+        demo: 'https://tourisme-yakro.vercel.app/',
+        code: 'https://github.com/carmelfree1/tourisme-yakro'
     }
 };
 
@@ -174,10 +206,20 @@ function openProjectModal(projectKey) {
     }
 
     modalType.textContent = project.type;
-    modalTitle.textContent = project.title;
+    modalTitle.textContent = project.status ? `${project.title} - ${project.status}` : project.title;
     modalDescription.textContent = project.description;
     modalGoal.textContent = project.goal;
-    modalCode.href = project.code;
+    if (project.code) {
+        modalCode.href = project.code;
+        modalCode.textContent = 'Voir le code';
+        modalCode.classList.remove('disabled-link');
+        modalCode.removeAttribute('aria-disabled');
+    } else {
+        modalCode.removeAttribute('href');
+        modalCode.textContent = 'Code confidentiel';
+        modalCode.classList.add('disabled-link');
+        modalCode.setAttribute('aria-disabled', 'true');
+    }
 
     modalFeatures.innerHTML = '';
     project.features.forEach(feature => {
