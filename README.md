@@ -1,29 +1,30 @@
-# Portfolio - Gnadou Léazike Bienvenu Carmel
+# Portfolio — Gnadou Carmel
 
-Portfolio personnel d'étudiant en informatique et développeur fullstack web et mobile.
+Portfolio de Gnadou Léazike Bienvenu Carmel, développeur web et mobile basé à Bouaflé, en Côte d’Ivoire.
+
+## Stack
+
+- Next.js 16 avec App Router
+- React 19 et TypeScript
+- CSS responsive, sans bibliothèque d’interface
+
+## Développement
+
+Prérequis : Node.js 20.9 ou une version ultérieure.
+
+```bash
+npm install
+npm run dev
+```
+
+La page est disponible sur `http://localhost:3000`. Pour valider la compilation de production :
+
+```bash
+npm run build
+```
 
 ## Contenu
 
-- Présentation professionnelle
-- Réalisations avec aperçu détaillé
-- Compétences techniques
-- Section de téléchargement du CV
-- Formulaire de contact via e-mail
+Les sections projets, services, profil, compétences et contact sont regroupées dans `app/page.tsx`. Les projets présentés sont la boutique DLG Parfumerie, QR Access et la plateforme de signalement routier. Leurs aperçus d’interface sont des compositions illustratives réalisées en CSS ; ils ne remplacent pas des captures d’écran des applications déployées.
 
-## Technologies
-
-- HTML5
-- CSS3
-- JavaScript
-
-## Projets présentés
-
-- Boutique e-commerce de vente de parfums
-- Application de gestion des entrées et sorties avec scan QR code
-- Plateforme de signalement d'incidents et de dégradations routières
-- Portfolio développeur
-- Site vitrine Yakro Tourisme
-
-## CV
-
-Déposer le fichier PDF du CV dans `assets/cv-gnadou-carmel.pdf` pour activer le bouton de téléchargement.
+Le CV est servi depuis `assets/cv-gnadou-carmel.pdf`. Le formulaire ouvre le logiciel de messagerie avec un brouillon prérempli ; il n’envoie ni ne stocke de données côté serveur.
