@@ -17,15 +17,14 @@ type Project = {
 const projects: Project[] = [
   {
     number: "01",
-    name: "DLG Parfumerie",
-    category: "Commerce · Produit digital",
-    summary: "Une boutique en ligne qui met les produits au premier plan et rend le parcours d’achat plus direct.",
-    challenge: "Organiser un catalogue de parfums, ses informations essentielles et les étapes de commande dans une expérience cohérente.",
-    outcome: "Une vitrine marchande claire, structurée autour du catalogue et conçue pour guider la découverte jusqu’à l’achat.",
-    technologies: ["PHP", "MySQL", "JavaScript"],
+    name: "CCM Nonsaka",
+    category: "Commerce · Santé naturelle & bio",
+    summary: "Une boutique en ligne dédiée aux médicaments traditionnels et aux produits alimentaires et cosmétiques bio.",
+    challenge: "Présenter clairement des produits variés et simplifier le suivi des clients, des commandes et de l’activité commerciale.",
+    outcome: "Une vitrine e-commerce reliée à un espace d’administration pour gérer l’interface client, les produits, les commandes et le chiffre d’affaires.",
+    technologies: ["Boutique en ligne", "Gestion de commandes", "Espace admin"],
     visual: "commerce",
-    href: "https://dlg-parfumerie.ct.ws/",
-    repo: "https://github.com/carmelfree1/e-commerce",
+    href: "https://ccm-nonsaka.com",
   },
   {
     number: "02",
@@ -67,10 +66,10 @@ function ProjectPreview({ project }: { project: Project }) {
     <div className={`project-preview preview-${project.visual}`} aria-label={`Aperçu illustratif de ${project.name}`}>
       {project.visual === "commerce" && (
         <div className="commerce-window">
-          <div className="preview-bar"><span /><span /><span /><span className="preview-bar-label">DLG / PARFUMERIE</span></div>
+          <div className="preview-bar"><span /><span /><span /><span className="preview-bar-label">CCM / NONSAKA</span></div>
           <div className="commerce-content">
-            <div className="commerce-copy"><span className="preview-kicker">L’ESSENCE DU QUOTIDIEN</span><strong>Une signature<br />pour chaque<br /><i>moment.</i></strong><span className="preview-underline" /><small>DÉCOUVRIR LA COLLECTION <Arrow /></small></div>
-            <div className="bottle-scene"><div className="bottle-glow" /><div className="perfume-bottle"><span>PARFUM<br /><b>NO. 08</b></span></div></div>
+            <div className="commerce-copy"><span className="preview-kicker">LE NATUREL AU QUOTIDIEN</span><strong>Le meilleur<br />de la nature,<br /><i>près de vous.</i></strong><span className="preview-underline" /><small>EXPLORER LA BOUTIQUE <Arrow /></small></div>
+            <div className="product-shelf" aria-label="Aperçu des catégories de produits"><div className="store-product"><span className="product-packaging product-herbal" /><small>MÉDICAMENTS<br />TRADITIONNELS</small></div><div className="store-product"><span className="product-packaging product-food" /><small>ALIMENTATION<br />BIO</small></div><div className="store-product"><span className="product-packaging product-care" /><small>SOINS<br />NATURELS</small></div></div>
           </div>
         </div>
       )}

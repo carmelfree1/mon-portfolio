@@ -117,13 +117,17 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .preview-underline { display: block; width: 32px; height: 1px; margin: 13px 0; background: #b7a58e; }
 .commerce-copy small { color: #767169; font-family: var(--mono); font-size: 6px; letter-spacing: .04em; }
 .commerce-copy small span { color: var(--accent); }
-.bottle-scene { position: relative; display: grid; min-height: 170px; place-items: center; overflow: hidden; background: radial-gradient(ellipse at 50% 55%, #d3b89b, #ede8de 62%, transparent 63%); }
-.bottle-glow { position: absolute; width: 105px; height: 105px; border-radius: 50%; background: #eed8b95c; filter: blur(12px); }
-.perfume-bottle { position: relative; width: 49px; height: 99px; border: 1px solid #b4a18b; border-radius: 9px 9px 5px 5px; background: linear-gradient(90deg,#c3a986,#efe0c9 44%,#bba180); box-shadow: 8px 12px 16px #5145352a; }
-.perfume-bottle::before { position: absolute; top: -14px; left: 16px; width: 17px; height: 14px; border-radius: 3px 3px 0 0; background: #8a7966; content: ""; }
-.perfume-bottle::after { position: absolute; top: -20px; left: 19px; width: 11px; height: 7px; border-radius: 2px 2px 0 0; background: #5c5248; content: ""; }
-.perfume-bottle span { display: block; margin-top: 34px; color: #755e49; font-family: var(--mono); font-size: 5px; line-height: 1.7; text-align: center; }
-.perfume-bottle b { font-size: 6px; }
+.product-shelf { display: grid; min-height: 170px; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: end; gap: 6px; padding: 12px 7px; background: radial-gradient(ellipse at 50% 70%, #dce3d3, #f0efe7 70%, transparent 71%); }
+.store-product { display: flex; min-width: 0; flex-direction: column; align-items: center; gap: 7px; }
+.product-packaging { position: relative; display: block; width: 36px; height: 58px; border: 1px solid #d7d5c8; background: #fffdf4; box-shadow: 5px 7px 12px #35412a20; }
+.product-packaging::after { position: absolute; inset: 15px 5px auto; height: 18px; border-block: 1px solid #879271; content: ""; }
+.product-herbal { width: 32px; height: 67px; border-radius: 3px 3px 7px 7px; background: linear-gradient(90deg,#75815d,#c4c99e 48%,#8b956f); }
+.product-herbal::before { position: absolute; top: -7px; left: 8px; width: 14px; height: 7px; background: #756447; content: ""; }
+.product-food { height: 51px; border-radius: 3px 3px 8px 8px; background: linear-gradient(90deg,#d5b56d,#f4e1a6 50%,#c3a05a); }
+.product-food::after { inset: 20px 4px auto; border-color: #a8894c; }
+.product-care { width: 34px; height: 59px; border-radius: 7px 7px 5px 5px; background: linear-gradient(90deg,#e8e2cf,#fffdf6 48%,#d9d0b8); }
+.product-care::before { position: absolute; top: -8px; left: 10px; width: 12px; height: 8px; border-radius: 3px 3px 0 0; background: #8d9b7a; content: ""; }
+.store-product small { color: #69715d; font-family: var(--mono); font-size: 5px; line-height: 1.5; text-align: center; }
 .dashboard-window { display: grid; width: 88%; max-width: 510px; min-height: 219px; grid-template-columns: 34px 1fr; background: white; box-shadow: 0 18px 45px #29332d25; transform: rotate(1.5deg); transition: transform .5s var(--ease); }
 .project-card:hover .dashboard-window { transform: rotate(0) translateY(-4px); }
 .dashboard-rail { display: flex; flex-direction: column; align-items: center; gap: 11px; padding: 11px 0 8px; background: #172d28; color: #a5b7ac; font-size: 9px; }
