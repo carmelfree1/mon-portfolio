@@ -214,7 +214,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .about-grid { display: grid; grid-template-columns: .85fr 1.15fr; gap: 12%; }
 .about-title { align-self: start; }
 .about-title h2 { margin: 0 0 26px; font-size: clamp(44px, 5.5vw, 68px); font-weight: 600; letter-spacing: -.08em; line-height: .99; }
-.about-title .text-link { border-bottom: 1px solid #c4c5bd; padding-bottom: 7px; }
+.cv-button { min-height: 54px; gap: 14px; margin-top: 6px; padding-inline: 20px; box-shadow: 0 12px 24px rgba(32,33,31,.12); }
+.cv-button:hover { box-shadow: 0 16px 28px rgba(32,33,31,.18); }
+.cv-button .cv-file-type { padding: 4px 6px; border: 1px solid rgba(255,255,255,.32); color: rgba(255,255,255,.9); font-family: var(--mono); font-size: 9px; letter-spacing: .1em; }
 .about-story { max-width: 550px; }
 .about-story > p { color: #666962; font-size: 13px; line-height: 1.9; }
 .about-story .about-lead { margin: 0 0 18px; color: var(--ink); font-size: 19px; font-weight: 500; letter-spacing: -.035em; line-height: 1.65; }
